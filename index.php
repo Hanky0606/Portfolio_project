@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword"content="chopped and baked">
+    <title>Hello I'm Hank🤓</title>
+    <link rel="stylesheet" href="main.css" type="text/css" >
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <a href="index.php">
+                <img src="images/logo/logo.png" alt="THL Studio lOGO" width="150px" height="auto">
+            </a>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="index.php">Home</a>
+                <a href="#about">About</a>
+                <a href="#works">works</a>
+                <a href="#contact_me">Contact Me</a>
+            </div>
+        </div>
+    </div>
+    <div id="content"> 
+        <img src="/images/profile_photo/profile_photo.jpg" width="300" height="auto" alt="Hank's Profile Photo"> 
+        <h1></h1>
+        <div class="wrapper">
+
+            <div id="about">
+                <h1>Welcome to my portfolio web page! <br>
+                    <span>I am a Graphic Designer, Animator, UI and UX Designer. </span>
+                    </h1>
+                <h2>About Me</h2>
+                <p>Hello fellas!! My name is Tzu-Han, Lin. You also can call me Hank. I am a student in New Media Production and Design at SAIT. I have learned about UI and UX Design, animation, video editing and all design principles for the past one and half years. After having the diverse skills training, my design skills and creative thinking have been upgraded, and also I have more confidence to handle the different projects </p>
+                
+                <h2>Skills</h2>
+                <ul>
+                    <p>HTML / PHP / JavaScript / CSS (Junior)</p>
+                    <p>Photoshop / Illustrator / Primere Pro (Intermediate)</p>
+                    <p>Blender (Junior)</p>
+                </ul>
+                
+                <div id="works">
+                    <h2>Works</h2>
+                    <br>
+                    <h3>3D Modeling </h3>
+                    <div class="entry_1">
+                        <figure>    
+                            <a href="#"><img id="myImg" src="/images/works/dining_project/dining_project.jpg" alt="Dining Room 3D Modeling" style="width:100%; max-width: 300px;"></a>
+                            <figcaption>3D Modeling | Dining Room Project</figcaption>
+                        </figure>
+                    </div>
+                    <div class="entry_2">                    
+                        <figure>    
+                      
+                        </figure>              
+                    </div>
+                    <div class="entry_3">
+                        <figure>    
+                           
+                        </figure>
+                    </div>
+
+                </div>
+
+                <div class="entry_section">
+                    <h3>UI & UX Design </h3>
+                    <div class="entry_1">
+                        <figure>    
+                            <a href="https://xd.adobe.com/view/533ec4e2-9eb3-4b77-91e1-881173cf5400-066d/screen/456ca822-6676-4307-b3d1-a3d994774c18"><img src="/images/works/web_markup/adroid_web_markup.png" alt="ADROID Web" style="width:100%"></a>
+                            <figcaption>UI Design | Adroid Warehouse</figcaption>
+                        </figure>
+                    </div>
+                    <div class="entry_2">                    
+                        <figure>    
+                            <a href="http://dev.saitnewmedia.ca/~tlin/mmda222/E-learningWebPage"><img src="/images/works/e_learning/chopped_and_baked.jpg" alt="Chopped and Baked" style="width:100%"></a>
+                            <figcaption>UI Design | Chopped and Baked</figcaption>
+                        </figure>              
+                    </div>
+                    <div class="entry_3">
+                        <figure>    
+                         
+                        </figure>
+                    </div>
+
+                </div>
+
+                <div class="entry_section">
+                    <h3>Graphic Design </h3>
+                    <div class="entry_1">
+                        <figure>    
+                            <a href="https://drive.google.com/file/d/1p5_5qsKewq0hMhxcAw2PHB1v3mqfaM1M/view"><img src="/images/works/burrito_brothers/primary logo.png" alt="Burrito Brothers" style="width:100%"></a>
+                            <figcaption>Logo Design | Burrito Brothers</figcaption>
+                        </figure>
+                    </div>
+                    <div class="entry_2">                    
+                        <figure>    
+                            <a href=" https://drive.google.com/file/d/1gF-YKkNd1FbZ8_pp22O2FkSYBu3VvbMh/view?usp=sharing"><img src="/images/works/X_Rival/x_rival_logo.png" alt="X-Rival Logo " style="width:100%"></a>
+                            <figcaption>Logo Design | X-Rival Fitness</figcaption>
+                        </figure>              
+                    </div>
+                    <div class="entry_3">
+                        <figure>    
+                            <a href=" https://drive.google.com/file/d/1gF-YKkNd1FbZ8_pp22O2FkSYBu3VvbMh/view?usp=sharing"><img src="/images/works/personal_brand/THL_studio_logo-09.png" alt="THL Studio Logo " style="width:100%"></a>
+                            <figcaption>Logo Design | THL Studio</figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+
+    
+            </div>
+                
+            <div id="contact_me">
+                <h2>Contact Me</h2>
+                <form action="" method="post">
+                    First Name: <input type="text" name="first_name"><br>
+                    Last Name: <input type="text" name="last_name"><br>
+                    Email: <input type="text" name="email"><br>
+                    Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+                    <input type="submit" name="submit" value="Submit"><br>
+                    <?php 
+                        if(isset($_POST['submit'])){
+                        $to = "joshuacyro.mandapatdatu@edu.sait.ca";
+                        $from = $_POST['email'];
+                        $first_name = $_POST['first_name'];
+                        $last_name = $_POST['last_name'];
+                        $subject = "Form submission";
+                        $subject2 = "Copy of your form submission";
+                        $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+                        $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+    
+                        $headers = "From:" . $from;
+                        $headers2 = "From:" . $to;
+                        mail($to,$subject,$message,$headers);
+                        mail($from,$subject2,$message2,$headers2);
+                        echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+                        }
+                    ?>
+                </form>
+            </div>
+            
+        </div>
+        
+    </div>    
+
+    <!--The Modal-->
+    <div id="myModal" class="modal">
+        <!--The close Button-->
+        <span class="close">&times;</span>
+        <!--Modal Content (The Image)-->
+        <img class="model-content" id="img01">
+        <!--Modal Caption (Image Text)-->
+        <div id="caption"></div>
+
+    </div>
+    
+
+        
+    <div class="footer">
+        &copy; 2021 Hank's Portfolio
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+        modal.style.display = "none";   
+        } 
+    </script>
+</body>
+</html>
